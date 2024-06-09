@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: 400;
+    
+}
+
+header {
+    padding: 20px;
+    background-color: darkcyan;
+    width: 100%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.profile img {
+    width: 20%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10%;
+    margin-left: 600px;
+}
+
+.profile p {
+    margin: 10px 0;
+    font-size: 1.5em;
+    text-align: center;
+    margin-right: 550px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 1rem;
+    margin-top: 15px;
+    text-align: center;
+    margin-right: 170px;
+    justify-content: space-between;
+    background-color: black;
+    width: 100%;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+    padding: 70px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    color: yellow;
+}
+nav ul li a:hover {
+    color: red;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+main section {
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+}
+.coursework {
+    margin-right: 20px;
+}
+.coursework, .uganda {
+    flex: 1 1 calc(50% - 30px);
+}
+.certificates {
+    flex-basis: 100%;
+}
+
+main section h2 {
+    margin-top: 0;
+    text-align: center;
+    color: white;
+    background-color: darkcyan;
+}
+.uganda-info img {
+    border-radius: 8px;
+    max-width: 150px;
+}
+* Basic styling */
+.course-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Styling for completed courses */
+.course-card.completed {
+    border-color: green;
+    border-radius: 10px;
+    border: solid green;
+    background-color: #E8F5E9;
+    margin: 1rem;
+}
+.course-card.not-completed {
+    border-color: orange;
+    border-radius: 10px;
+    border: solid orange;
+    background-color: hsla(49, 62%, 69%, 0.599);
+    margin: 1rem;
+}
+
+button {
+    margin-left: 300px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: yellow;
+    color: blue;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: darkcyan;
+    width: auto;
+    color: white;
+}

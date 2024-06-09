@@ -1,0 +1,28 @@
+
+@media (min-width: 1024px) {
+    .coursework {
+        margin-right: 40px; /* More horizontal space between coursework and uganda on larger screens */
+    }
+
+    .profile img {
+        width: 200px; /* Larger image on larger screens */
+        height: 200px;
+        margin-right: 30px; /* Adjust margin for larger screens */
+    }
+
+    #menu {
+		display: none; /* hide hamburger button */
+	}
+    
+    .profile p {
+        font-size: 2em; /* Larger font size for name on larger screens */
+    }
+
+    nav ul li {
+        margin: 0 15px; /* More space between navigation items */
+    }
+
+    main section {
+        padding: 30px; /* Increase padding for sections on larger screens */
+    }
+}
