@@ -28,11 +28,11 @@ header {
     margin-left: 600px;
 }
 
-.profile p {
+.profile h1 {
     margin: 10px 0;
     font-size: 1.5em;
     text-align: center;
-    margin-right: 650px;
+    margin-right: 400px;
 }
 
 nav ul {
@@ -99,9 +99,9 @@ main section h2 {
     border-radius: 8px;
     max-width: 150px;
 }
-* Basic styling */
+/* Basic styling */
 .course-card {
-    border: 1px solid #ccc;
+    border: 4px solid #f9f9f9;
     padding: 15px;
     margin: 10px 0;
     border-radius: 8px;
@@ -112,14 +112,14 @@ main section h2 {
 .course-card.completed {
     border-color: green;
     border-radius: 10px;
-    border: solid green;
+    border: 4px solid green;
     background-color: #E8F5E9;
     margin: 1rem;
 }
 .course-card.not-completed {
     border-color: orange;
     border-radius: 10px;
-    border: solid orange;
+    border: 4px solid orange;
     background-color: hsla(49, 62%, 69%, 0.599);
     margin: 1rem;
 }
