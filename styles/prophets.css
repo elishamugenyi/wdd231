@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+    margin: 0;
+    padding: 1rem 1rem;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#cards section {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Styling for the prophet's information */
+#card p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #666;
+}
+#cards img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+  
+  
