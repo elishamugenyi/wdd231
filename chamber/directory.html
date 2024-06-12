@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title content="Elisha Mugenyi, WDD 231 - Directory">Elisha Mugenyi, WDD 231 - Directory</title>
+    <meta name="author" content="Elisha Mugenyi">
+    <meta name="description" content="Elisha Mugenyi, Chamber of commerce">
+    <meta property="og:image" content="https://www.pexels.com/photo/low-angle-photography-of-glass-buildings-2529179/" />
+    <meta property="og:url" content="https://elishamugenyi.github.io/wdd231/" />
+    <meta property="og:type" content="chamber of commerce website" />
+    <meta property="og:title" content="Elisha Mugenyi, WDD 231 - Directory" />
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/chamber-large.css">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/directory.js"></script>
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <img src="images/chamber-logo.webp" loading="lazy" alt="chamber logo">
+        </div>
+        <div class="header-title">
+            <p>
+                Nakawa Chamber of Commerce
+            </p>
+        </div>
+        <div class="menu">
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#"> Home </a></li>
+                    <li><a href="#members" class="active">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero-container">
+        <picture>
+            <source srcset="images/chamber-hero.webp" media="(min-width: 1000px)">
+            <source srcset="images/chamber-hero-medium.webp" media="(min-width: 500px)">
+            <img src="images/chamber-hero-small.webp" alt="Nakawa Chamber of Commerce">
+        </picture>
+    </section>
+    <section class="home">
+        <h2>Home</h2>
+    </section>
+    <main>
+        <section class="updates">
+            <div class="events">
+                <h3> Events</h3>
+            </div>
+        </section>
+
+        <section class="weather">
+            <div class="current">
+                <h3>Current Weather</h3>
+                <div id="currentweather">
+
+                </div>
+            </div>
+        </section>
+
+        <section class="forecast">
+            <div class="details">
+                <h3> Weather Forecast</h3>
+                
+            </div>
+        </section>
+        
+    </main>
+    <div id="members">
+        <p>Welcome to this section, i will javascript it to produce results of memebers.</p>
+    </div>
+    <footer>
+        <div class="footer-left">
+            <h4>Nakawa Chamber of Commerce</h4>
+            <p>📍Nakawa Business Center</p>
+            <p>☎ +256787019408</p>
+            <p>📧 Email: info@nakawachamber.go.ug</p>
+            <p>Jinja Road</p>
+            <p>Kampala, Uganda</p>
+        </div>
+        <div class="footer-middle">
+            <p>Visit our socials || <a href="www.facebook.com/nakawachamber">Facebook</a><a href="www.x.com/@nakawachamberof commerce">X</a><a href="www.youtube.com/nakawachaberofcommerce">YouTube</a></p>
+        </div>
+        <div class="footer-right">
+            <h4>WDD 231 Class Project</h4>
+            <p>
+                <span id="currentyear"></span> Elisha Mugenyi 🇺🇬 Uganda
+            </p>
+            <p id="lastModified">last</p>
+        </div>
+    </footer>
+</body>
+
+</html>
