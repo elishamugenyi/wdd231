@@ -29,7 +29,7 @@ header {
     flex: 1;
     margin-left: 10px;
 }
-.header-title p {
+.header-title h1 {
     font-weight: bold;
 }
 .menu {
