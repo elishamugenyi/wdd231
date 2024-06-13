@@ -1,0 +1,10 @@
+@media (max-width: 3.74%) {
+    header, .hero-container , main {
+        width: auto;
+    }
+    #members {
+        width: 100%;
+        display: flex;
+    }
+    
+}

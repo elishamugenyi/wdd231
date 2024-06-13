@@ -1,0 +1,66 @@
+[
+    {
+      "name": "Ceva Logistics Ltd",
+      "address": "Plot M24, Nakawa, Mbuya, Jinja Rd",
+      "phone": "+256 0300-456-7890",
+      "website": "https://www.cevalogistics.com/en/africa",
+      "image": "ceva.jpg",
+      "membershipLevel": 3,
+      "description": "Leading the way in tech innovation."
+    },
+    {
+      "name": "Spedag Interfreight Uganda Ltd",
+      "address": "Plot 284, Nakawa, Kampala",
+      "phone": "+256 31 2562000",
+      "website": "https://www.mrspedag.com/en/africa",
+      "image": "spedag.jpg",
+      "membershipLevel": 2,
+      "description": "Eco-friendly solutions for a better planet."
+    },
+    {
+      "name": "Good Brothers IMCD",
+      "address": "Plot 751 Block 113, Namanve",
+      "phone": "+256705 503343",
+      "website": "https://goodbrothersuganda.com/",
+      "image": "goodbrothers.jpg",
+      "membershipLevel": 1,
+      "description": "Warehousing solutions"
+    },
+    {
+      "name": "Liberty ICD",
+      "address": "Bweyogere Industral Area Rd, Kampala",
+      "phone": "+256755 744331",
+      "website": "https://www.libertyicd.com",
+      "image": "Liberty-icd.jpg",
+      "membershipLevel": 3,
+      "description": "Achieve your financial goals with us."
+    },
+    {
+      "name": "Speedaf Logistics",
+      "address": "Plot 3525, Butoko, Kisaasi - Kyanja Rd, Kampala",
+      "phone": "+256786 298888",
+      "website": "https://speedaf.com/ug-en",
+      "image": "speedaf.jpg",
+      "membershipLevel": 2,
+      "description": "One stop Logistics service provider focusing on emerging markets"
+    },
+    {
+      "name": "LC Waikiki",
+      "address": "COOPER ROAD KAMWOKYAI, VILLAGE A,KAMPALS CENTRAL DIVI,KESEMENTI, Kampala",
+      "phone": "+256756 518713",
+      "website": "https://corporate.lcwaikiki.com/",
+      "image": "lc-waikiki.jpg",
+      "membershipLevel": 1,
+      "description": "Eco Friendly. The best garments produced in Africa, for Africa"
+    },
+    {
+      "name": "Nyange Cargo Logistics Ltd",
+      "address": "Haruna Mall Level 4, Room 4, Ntinda, Kampala Uganda",
+      "phone": "+256787019408",
+      "website": "https://nyangecargologistics.com",
+      "image": "nyange-cargo.jpg",
+      "membershipLevel": 3,
+      "description": "Prompt logistics company with vast experience in oversea shipments."
+    }
+  ]
+  
