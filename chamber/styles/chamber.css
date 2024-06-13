@@ -19,7 +19,6 @@ header {
 }
 .profile {
     flex: 1;
-    align-items: left;
     border: 4px solid grey;
     border-radius: 8px;
     max-width: fit-content;
@@ -28,7 +27,6 @@ header {
 }
 .header-title {
     flex: 1;
-    align-items: left;
     margin-left: 10px;
 }
 .header-title p {
