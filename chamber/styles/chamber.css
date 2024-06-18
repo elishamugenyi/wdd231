@@ -107,6 +107,10 @@ main {
     background-color: black;
     color: aqua;
  }
+ button:hover {
+    background-color: white;
+    color: black;
+ }
 #members {
    margin-left: 20px;
    margin: 10px 10px;
