@@ -1,8 +1,8 @@
-//use dom cotent loaded
+//use dom content loaded
 document.addEventListener('DOMContentLoaded', () => {
     const info = 'data/members.json';
-
-const cards = document.querySelector('#members');
+    const cards = document.querySelector('#members');
+    const toggleButton = document.getElementById('toggleview');
 
 //function to fetch data
 async function fetchMembers() {
@@ -57,5 +57,10 @@ const displayMembers = (members) => {
     });//end of arrow function for cards
 }
 
+    //function to toogle the view between grid or list.
+    toggleButton.addEventListener('click', () => {
+        cards.classList.toggle('grid-view');
+        cards.classList.toggle('list-view');
+    });
 
 });
