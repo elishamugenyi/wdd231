@@ -62,5 +62,4 @@ const displayMembers = (members) => {
         cards.classList.toggle('grid-view');
         cards.classList.toggle('list-view');
     });
-
 });
