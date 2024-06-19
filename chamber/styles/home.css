@@ -97,7 +97,7 @@ button:hover {
 }
 /*css for the last container*/
 .spotlights {
-    display: flex;
+    display: block;
     width: 100%;
 }
 .spotlights h4  {
