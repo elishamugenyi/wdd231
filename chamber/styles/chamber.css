@@ -75,7 +75,7 @@ nav ul li a:hover {
     text-align: left;
     margin-left: 20px;
 }
-main {
+/*main {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -110,7 +110,7 @@ main {
  button:hover {
     background-color: white;
     color: black;
- }
+ }*/
 #members {
    margin-left: 20px;
    margin: 10px 10px;
@@ -156,9 +156,8 @@ main {
 main section h3 {
     margin-top: 0;
     margin-right: 10px;
-    text-align: left;
-    color: white;
-    background-color: #333;
+    text-align: center;
+    color: black;
 }
 
 footer {

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title content="Nakawa Chamber of Commerce">Nakawa Chamber of Commerce</title>
+    <meta name="author" content="Elisha Mugenyi">
+    <meta name="description" content="Elisha Mugenyi, Chamber of commerce">
+    <meta property="og:image" content="https://www.elishamugenyi.github.io/wdd231/chamber/images/chamber-hero.webp/">
+    <meta property="og:url" content="https://elishamugenyi.github.io/wdd231/chamber/home">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Elisha Mugenyi, WDD 231 - Directory">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/chamber-small.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/chambercurrentweather.js"></script>
+    <script defer src="scripts/spotlight.js"></script>
+</head>
+    <body>
+        <header>
+            <div class="profile">
+                <img src="images/chamber-logo.webp" loading="lazy" alt="chamberlogo" width="160" height="160">
+            </div>
+            <div class="header-title">
+                <h1>Nakawa Chamber of Commerce</h1>
+            </div>
+            <div class="menu">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="index.html" class="active"> Home </a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="#">Join</a></li>
+                        <li><a href="#">discover</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <section class="hero-container">
+                <picture>
+                    <source srcset="images/chamber-hero.webp" media="(min-width: 1000px)">
+                    <source srcset="images/chamber-hero-medium.webp" media="(min-width: 500px)">
+                    <img src="images/chamber-hero-small.webp" loading="lazy" alt="NakawaChamberofCommerce" width="500" height="250" >
+                </picture>
+            </section>
+            <section class="cta">
+                <h2>Join Our Thriving Community!</h2>
+                <p>
+                    <strong>Are you ready to elevate your business to new heights? </strong><br><br> Connect, grow, and succeed with our vibrant network of local businesses.<br>
+                    Join the Chamber of Commerce today and unlock exclusive benefits, invaluable resources, and unparalleled opportunities for collaboration.
+                    <br><br>
+                    Don't miss out—be part of the success story!
+                    <br>
+                    <button id="join">Join Now.</button>
+                </p>  
+            </section>
+
+            <section class="updates">
+                <div class="events">
+                    <h3> Current Events</h3>
+                    <div class="event">
+                        <h3>Business Networking Breakfast</h3>
+                        <p><strong>Date:</strong> July 15, 2024</p>
+                        <p><strong>Time:</strong> 7:30 AM - 9:00 AM</p>
+                        <p><strong>Location:</strong> The Grand Hotel Ballroom</p>
+                        <p>Start your day with a delicious breakfast and meet fellow business leaders in the community. Expand your network, share ideas, and discover new opportunities.</p><br>
+                        <button id="register">Register For Event.</button>
+                    </div>
+
+                    <div class="event">
+                        <h3>Small Business Workshop: Digital Marketing 101</h3>
+                        <p><strong>Date:</strong> August 10, 2024</p>
+                        <p><strong>Time:</strong> 10:00 AM - 12:00 PM</p>
+                        <p><strong>Location:</strong> Downtown Community Center, Room 3</p>
+                        <p>Learn the basics of digital marketing and how to leverage online tools to grow your business. This workshop is perfect for beginners and those looking to refresh their skills.</p><br>
+                        <button id="register">Register For Event.</button>
+                    </div>
+
+                    <div class="event">
+                        <h3>Annual Gala and Awards Night</h3>
+                        <p><strong>Date:</strong> September 20, 2024</p>
+                        <p><strong>Time:</strong> 6:00 PM - 10:00 PM</p>
+                        <p><strong>Location:</strong> City Convention Center</p>
+                        <p>Join us for an elegant evening of celebration and recognition of outstanding businesses in our community. Enjoy a gourmet dinner, live entertainment, and a chance to honor the achievements of local entrepreneurs.</p><br>
+                        <button id="register">Register For Event.</button>
+                    </div>
+
+                    <div class="event">
+                        <h3>Women in Business Luncheon</h3>
+                        <p><strong>Date:</strong> October 5, 2024</p>
+                        <p><strong>Time:</strong> 12:00 PM - 2:00 PM</p>
+                        <p><strong>Location:</strong> Riverside Café</p>
+                        <p>Celebrate and support women entrepreneurs at our Women in Business Luncheon. Hear inspiring stories, gain valuable insights, and connect with like-minded professionals.</p><br>
+                        <button id="register">Register For Event.</button>
+                    </div>
+                </div>
+
+                <div class="weather">
+                    <h3>Current Weather</h3>
+                    <p><strong>Entebbe, Uganda</strong></p>
+                    <p><span id="current-temp"></span></p>
+                    <p><span id="localTime"></span></p>
+                    <figure>
+                        <p>Weather Desription Today is:</p>
+                        <img id="weather-icon" src="" alt="" loading="lazy">
+                        <figcaption></figcaption>
+                    </figure>
+                    <p><strong>3-Day Forecast</strong></p>
+                    <div id="forecast"></div>
+                </div>
+            </section>
+
+            <section class="spotlights">
+                <div id="members" class="grid-view">
+                    
+                    
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="footer-left">
+                <h4>Nakawa Chamber of Commerce</h4>
+                <p>📍Nakawa Business Park</p>
+                <p>☎ +256787019408</p>
+                <p>📧 Email: info@nakawachamber.go.ug</p>
+                <p>Jinja Road</p>
+                <p>Kampala, Uganda</p>
+            </div>
+            <div class="footer-middle">
+                <p><a href="www.facebook.com/nakawachamber"><img src="images/FB.webp" alt="nakawachamberofcommercefacebook"></a><a href="www.x.com/@nakawachamberofcommerce"><img src="images/X.webp" alt="nakawachamberofcommercex"></a><a href="www.youtube.com/nakawachaberofcommerce"><img src="images/YT.webp" alt="nakawachamberofcommerceyoutube"></a></p>
+            </div>
+            <div class="footer-right">
+                <h4>WDD 231 Class Project</h4>
+                <p>
+                    <span id="currentyear"></span> Elisha Mugenyi 🇺🇬 Uganda
+                </p>
+                <p id="lastModified">last</p>
+            </div>
+        </footer>
+    </body>
+</html>
