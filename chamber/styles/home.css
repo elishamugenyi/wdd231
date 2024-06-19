@@ -42,7 +42,7 @@ button:hover {
     color: white;
 }
 /*updates section css, this section includes the events and weather div*/
-.updates {
+.update {
     display: flex;
     padding: 20px;
     margin: 10px 10px;

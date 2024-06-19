@@ -75,7 +75,7 @@ nav ul li a:hover {
     text-align: left;
     margin-left: 20px;
 }
-/*main {
+.directory {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -89,28 +89,30 @@ nav ul li a:hover {
     text-align: left;
     margin: 10px 10px;
 }
-.weather {
+.weatherd {
     flex: 1;
     text-align: center;
     margin: 10px 10px;
 }
-.forecast {
+.forecastd {
     flex: 1;
     text-align: right;
     margin: 10px 10px;
 }
- button {
-    margin-left: 20px;
+button {
+    padding: 12px;
+    margin: 10px;
+    border: 2px solid grey;
+    border-radius: 20px;
+    background-color: blanchedalmond;
+    color: blue;
     font-weight: bold;
-    height: 50px;
-    width: fit-content;
-    background-color: black;
-    color: aqua;
  }
  button:hover {
-    background-color: white;
-    color: black;
- }*/
+     background-color: grey;
+     color: white;
+ 
+ }
 #members {
    margin-left: 20px;
    margin: 10px 10px;
