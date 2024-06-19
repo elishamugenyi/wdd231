@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     line-height: 1;
-    margin: 0;
+    margin: 10px 0;
     padding: 0.5rem;
 }
 header {
@@ -69,7 +69,7 @@ nav ul li a:hover {
 .hero-container img {
     display: flex;
     width: 100%;
-    height: 900px;
+    height: 600px;
 }
 .home h2 {
     text-align: left;
