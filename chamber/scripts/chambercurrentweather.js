@@ -18,6 +18,7 @@ function displayCurrentWeather(data) {
     const weatherIcon = document.querySelector('#weather-icon');
     const captionDesc = document.querySelector('figcaption');
 
+
     currentTemp.innerHTML = `Current Temperature: ${data.main.temp}&deg;C`;
     const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     const desc = data.weather[0].description;
@@ -25,7 +26,10 @@ function displayCurrentWeather(data) {
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);
     weatherIcon.setAttribute('loading', 'lazy');
+    weatherIcon.setAttribute('width','60');
+    weatherIcon.setAttribute('height','70');
     captionDesc.textContent = `${desc}`;
+    
 }
 
 function displayEntebbeForecast(data) {
