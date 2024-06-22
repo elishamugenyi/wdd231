@@ -14,23 +14,37 @@ async function fetchWeatherData(url) {
 }
 
 function displayCurrentWeather(data) {
-    const currentTemp = document.querySelector('#current-temp');
-    const weatherIcon = document.querySelector('#weather-icon');
-    const captionDesc = document.querySelector('figcaption');
+    const weatherContainer = document.querySelector('#weather-icon'); // this is the container in my html with id weather-icon
+    weatherContainer.innerHTML = ''; // Clear previous content
 
+    const section = document.createElement('section');
+    section.classList.add('current-weather');
 
-    currentTemp.innerHTML = `Current Temperature: ${data.main.temp}&deg;C`;
+    const weatherIcon = document.createElement('img');
+    const currentTemp = document.createElement('p');
+    const weatherDesc = document.createElement('p');
+    const captionDesc = document.createElement('figcaption');
+
     const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     const desc = data.weather[0].description;
 
+    currentTemp.innerHTML = `Current Temperature: ${data.main.temp}&deg;C`;
+    weatherDesc.innerHTML = `The Weather Today is:  ${desc}`;
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);
     weatherIcon.setAttribute('loading', 'lazy');
     weatherIcon.setAttribute('width','60');
     weatherIcon.setAttribute('height','70');
-    captionDesc.textContent = `${desc}`;
-    
+    //captionDesc.textContent = `${desc}`;
+
+    section.appendChild(currentTemp);
+    section.appendChild(weatherDesc);
+    section.appendChild(weatherIcon);
+    section.appendChild(captionDesc);
+
+    weatherContainer.appendChild(section);
 }
+
 
 function displayEntebbeForecast(data) {
     const forecastContainer = document.querySelector('#forecast');

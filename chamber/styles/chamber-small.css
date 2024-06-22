@@ -1,4 +1,4 @@
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     header, .hero-container , main {
         width: auto;
     }
@@ -10,5 +10,43 @@
     #members section {
         width: 100%;
     }
-    
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cta, .update {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .cta h2 {
+        margin: 10px 0;
+    }
+
+    .cta p, .events, .weather, .forecast-card {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .events {
+        height: auto;
+        overflow-y: visible; /* Remove scrolling on smaller screens */
+    }
+
+    .weather {
+        margin-left: 0;
+    }
+
+    .spotlights h4 {
+        margin-left: 0;
+    }
 }
