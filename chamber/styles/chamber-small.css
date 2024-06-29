@@ -49,4 +49,8 @@
     .spotlights h4 {
         margin-left: 0;
     }
+
+    label {
+        grid-template-columns: 1fr;
+    }
 }
