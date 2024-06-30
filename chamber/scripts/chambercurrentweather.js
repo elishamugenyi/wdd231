@@ -93,4 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     displayEntebbeTime();
     setInterval(displayEntebbeTime, 1000);
+
+    //set the join button to redirect you to join page.
+    document.getElementById('join').addEventListener("click",redirectJoin);
+
+    //create function to redirect
+    function redirectJoin() {
+        window.location.href = ("join.html")
+    }
 });

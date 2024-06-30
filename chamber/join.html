@@ -61,13 +61,13 @@
                         <input type="text" id="lastName" name="lastName" required title="Enter your last name" autocomplete="family-name">
                     </label>
                     <label for="organizationTitle">Organizational Title:
-                        <input type="text" id="organizationTitle" name="organizationTitle" title="Enter your organizational title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                        <input type="text" id="organizationTitle" name="organizationTitle" title="Enter your organizational title" placeholder="Title must be 7 characters longer, use only alphabets" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
                     </label>
                     <label for="email">Email Address:
                         <input type="email" id="email" name="email" required title="Enter your email address" autocomplete="email" placeholder="example@example.com">
                     </label>
                     <label for="phone">Mobile Phone Number:
-                        <input type="tel" id="phone" name="phone" required title="Enter your mobile phone number" autocomplete="tel">
+                        <input type="tel" id="phone" name="phone" required title="Enter your mobile phone number" placeholder="+256 xxx-xxx-xxx" autocomplete="tel">
                     </label>
                     <label for="organizationName">Organization Name:
                         <input type="text" id="organizationName" name="organizationName" required title="Enter your organization's name" autocomplete="organization">
@@ -79,7 +79,7 @@
                             <option value="silver">Silver Membership</option>
                             <option value="gold">Gold Membership</option>
                         </select>
-                        <button type="button" id="membershipModalTrigger">Learn More</button>
+                        <button type="button" id="membershipModalTrigger">Learn More About Membership Levels</button>
                     </label>
                     <label for="description">Organization Description:
                         <textarea id="description" name="description" title="Enter your organization's description"></textarea>
@@ -92,19 +92,19 @@
             <!-- Modal for Membership Benefits -->
             <dialog id="membershipModal">
                 <h2>Membership Levels</h2>
-                <div>
+                <div class="membership-card" id="npCard">
                     <h3>NP Membership (Non-Profit)</h3>
                     <p>No fee, special events, training</p>
                 </div>
-                <div>
+                <div class="membership-card" id="bronzeCard">
                     <h3>Bronze Membership</h3>
                     <p>Event discounts, advertising opportunities</p>
                 </div>
-                <div>
+                <div class="membership-card" id="silverCard">
                     <h3>Silver Membership</h3>
                     <p>All bronze benefits, plus more exclusive events</p>
                 </div>
-                <div>
+                <div class="membership-card" id="goldCard">
                     <h3>Gold Membership</h3>
                     <p>All silver benefits, premium advertising, and more</p>
                 </div>

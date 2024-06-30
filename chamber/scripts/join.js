@@ -1,48 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Set current timestamp in the hidden field
-    //document.getElementById('timestamp').value = new Date().toISOString();
-    // Set current timestamp in the hidden field
-    /*const timestampField = document.getElementById('timestamp');
-    if (timestampField) {
-        timestampField.value = new Date().toISOString();
-    } else {
-        console.error("Element with ID 'timestamp' not found.");
-    }*/
+    // Set the current timestamp
+    document.getElementById('timestamp').value = new Date().toISOString();
 
-    // Modal handling for membership levels
-    const modalTrigger = document.querySelector('#membershipModalTrigger');
-    const modal = document.getElementById('membershipModal');
-
-    modalTrigger.addEventListener('click', function() {
-        modal.showModal();
+    // Handle the "Learn More" button click to open the modal
+    document.getElementById('membershipModalTrigger').addEventListener('click', function() {
+        document.getElementById('membershipModal').showModal();
     });
 
-    const closeModalBtn = modal.querySelector('button');
-    closeModalBtn.addEventListener('click', function() {
-        modal.close();
-    });
+    // Handle form submission
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the default way
 
-    // Form submission handling
-    const form = document.querySelector('form');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-        const formData = new FormData(form);
-        const entries = formData.entries();
+        // Get form data
+        const formData = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            organizationTitle: document.getElementById('organizationTitle').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            organizationName: document.getElementById('organizationName').value,
+            membershipLevel: document.getElementById('membershipLevel').value,
+            description: document.getElementById('description').value,
+            timestamp: document.getElementById('timestamp').value
+        };
 
-        // Constructing the query string for displaying on thankyou.html
-        let queryString = '';
-        for (const [key, value] of entries) {
-            queryString += `${key}=${encodeURIComponent(value)}&`;
-        }
-        // Remove the last '&' character
-        queryString = queryString.slice(0, -1);
+        // Store form data in localStorage
+        localStorage.setItem('formData', JSON.stringify(formData));
 
-        // Redirect to thankyou.html with query string
-        window.location.href = `thankyou.html?${queryString}`;
+        // Redirect to thank you page
+        window.location.href = 'thankyou.html';
 
-        // Clear the form after submission
+        //clear form after submission.
         form.reset();
     });
-
-    
 });
+

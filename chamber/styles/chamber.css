@@ -142,7 +142,7 @@ button, input[type="submit"] {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/* Styling for the prophet's information */
+/* Styling for the members information */
 #members p {
     font-size: 1rem;
     font-family: Arial, sans-serif;
@@ -157,19 +157,17 @@ button, input[type="submit"] {
 /*Styling the form and its elements*/
 .form-data {
     width: 100%;
-    max-width: 600px; /* Adjust max-width as needed */
+    max-width: 600px; 
     margin: auto;
     padding: 20px;
     text-align: center;
 }
-
 /* Style form labels and inputs */
 form {
     display: grid;
     gap: 10px;
     margin-top: 20px;
 }
-
 label {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -177,7 +175,6 @@ label {
     gap: 10px;
     text-align: left;
 }
-
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -189,7 +186,6 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
 /* Modal styling */
 #membershipModal {
     position: fixed;
@@ -200,11 +196,11 @@ select {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 80%;
-    max-height: 80%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 75%;
+    max-height: 70%;
     overflow: auto;
-    z-index: 1000; /* Ensure modal is on top of other content */
+    z-index: 1000; /* places modal on top of other content */
 }
 
 #membershipModal h2 {
@@ -218,34 +214,73 @@ select {
 
 #membershipModal h3 {
     margin-bottom: 5px;
-    color: #007bff; /* Membership level title color */
+    color: #007bff; 
 }
 
 #membershipModal p {
     color: #666;
 }
+/* Membership cards styling and animation*/
+.membership-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
 
+.membership-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 #membershipModal button {
     margin-top: 10px;
     padding: 8px 16px;
     font-size: 14px;
+    height: 40px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
-
 #membershipModal button:hover {
     background-color: #0056b3;
 }
-
 /* Backdrop styling */
 #membershipModal::backdrop {
-    backdrop-filter: blur(5px); /* Adjust blur intensity as needed */
-    background-color: rgba(184, 204, 205, 0); /* Adjust background color and opacity */
+    backdrop-filter: blur(5px); 
+    background-color: rgba(184, 204, 205, 0); 
 }
-
+#formData {
+    margin: 10px 10px;
+    padding: 4px;
+    margin-left: 10px;
+    width: 40%;
+    border: grey;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 main section h3 {
     margin-top: 0;
@@ -253,7 +288,6 @@ main section h3 {
     text-align: center;
     color: black;
 }
-
 footer {
     display: flex;
     justify-content: space-between;
