@@ -109,7 +109,7 @@ button, input[type="submit"] {
     font-weight: bold;
  }
  button:hover, input[type="submit"]:hover {
-     background-color: grey;
+     background-color: gray;
      color: white;
  
  }
