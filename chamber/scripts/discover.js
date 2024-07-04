@@ -32,43 +32,53 @@ document.addEventListener("DOMContentLoaded", function() {
     messageContainer.className = 'visit-message';
     sidebar.prepend(messageContainer);
 
-    if ("IntersectionObserver" in window) {
-        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    let lazyImage = entry.target;
-                    lazyImage.src = lazyImage.dataset.src;
-                    lazyImage.classList.remove("lazy");
-                    lazyImageObserver.unobserve(lazyImage);
-                }
-            });
-        });
 
-        lazyImages.forEach(function(lazyImage) {
-            lazyImageObserver.observe(lazyImage);
-        });
-    } else {
-        // Fallback for browsers without IntersectionObserver support
-        let lazyLoad = function() {
+    const SetupLazyLoad = () => {
+        if ("IntersectionObserver" in window) {
+            let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        let lazyImage = entry.target;
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImage.classList.remove("lazy");
+                        lazyImageObserver.unobserve(lazyImage);
+                    }
+                });
+            });
+    
             lazyImages.forEach(function(lazyImage) {
-                if (lazyImage.getBoundingClientRect().top < window.innerHeight && lazyImage.getBoundingClientRect().bottom > 0) {
-                    lazyImage.src = lazyImage.dataset.src;
-                    lazyImage.classList.remove("lazy");
-                }
+                lazyImageObserver.observe(lazyImage);
             });
-
-            if (lazyImages.length === 0) {
-                document.removeEventListener("scroll", lazyLoad);
-                window.removeEventListener("resize", lazyLoad);
-                window.removeEventListener("orientationchange", lazyLoad);
-            }
-        };
-
-
-        document.addEventListener("scroll", lazyLoad);
-        window.addEventListener("resize", lazyLoad);
-        window.addEventListener("orientationchange", lazyLoad);
-    }
+        } else {
+            // Fallback for browsers without IntersectionObserver support
+            let lazyLoad = function() {
+                lazyImages.forEach(function(lazyImage) {
+                    if (lazyImage.getBoundingClientRect().top < window.innerHeight && lazyImage.getBoundingClientRect().bottom > 0) {
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImage.classList.remove("lazy");
+                    }
+                });
+    
+                if (lazyImages.length === 0) {
+                    document.removeEventListener("scroll", lazyLoad);
+                    window.removeEventListener("resize", lazyLoad);
+                    window.removeEventListener("orientationchange", lazyLoad);
+                }
+            };
+    
+    
+            document.addEventListener("scroll", lazyLoad);
+            window.addEventListener("resize", lazyLoad);
+            window.addEventListener("orientationchange", lazyLoad);
+        }
+    };
+    //set up lazy load on first scroll
+    const onFirstScroll = () => {
+        SetupLazyLoad();
+        document.removeEventListener("scroll", onFirstScroll);
+    };
+    document.addEventListener("scroll", onFirstScroll);
+    
 
     //handle join button on discover page
     document.getElementById('toJoin').addEventListener('click',redirect);
