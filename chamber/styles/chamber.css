@@ -221,7 +221,7 @@ select {
     color: #666;
 }
 /* Membership cards styling and animation*/
-.membership-card {
+.membership-card,.events {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 15px;
@@ -235,7 +235,7 @@ select {
     animation-delay: 0.2s;
 }
 
-.membership-card:nth-child(2) {
+.membership-card:nth-child(2), .events {
     animation-delay: 0.4s;
 }
 
@@ -281,7 +281,59 @@ select {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+/*styling for discover page*/
+.container {
+    /*display: flex;*/
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+    width: 100%;
+    padding: 10px;
+}
+.sidebar {
+    /*width: 25%;*/
+    padding: 20px;
+    margin: 10px 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.main-content {
+    /*width: 75%;*/
+    padding: 20px;
+    /*margin-left: 2%;*/
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.demographics, .stats, .visit-message {
+    background-color: #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+figure {
+    width: calc(33.333% - 20px);/*30%;*/
+    margin: 10px;/*1%;*/
+    text-align: center;
+}
+.lazy {
+    display: block;
+}
+figure:hover {
+    transform: scale(1.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+/*end of discover page styling*/
 main section h3 {
     margin-top: 0;
     margin-right: 10px;
