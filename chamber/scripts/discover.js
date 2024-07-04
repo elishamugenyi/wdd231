@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (entry.isIntersecting) {
                         let lazyImage = entry.target;
                         lazyImage.src = lazyImage.dataset.src;
-                        lazyImage.classList.remove("lazy");
+                        lazyImage.classList.remove("lazyy");
                         lazyImageObserver.unobserve(lazyImage);
                     }
                 });
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 lazyImages.forEach(function(lazyImage) {
                     if (lazyImage.getBoundingClientRect().top < window.innerHeight && lazyImage.getBoundingClientRect().bottom > 0) {
                         lazyImage.src = lazyImage.dataset.src;
-                        lazyImage.classList.remove("lazy");
+                        lazyImage.classList.remove("lazyy");
                     }
                 });
     
