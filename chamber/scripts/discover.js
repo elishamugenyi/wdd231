@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const lastVisit = localStorage.getItem('lastVisitKey');
     let message = '';
 
-    let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+    let lazyImages = [].slice.call(document.querySelectorAll("lazyy"));
 
     if (lastVisit === null) {
         message = "Welcome! Let us know if you have any questions.";
