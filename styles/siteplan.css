@@ -14,13 +14,14 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #4CAF50;
-    color: white;
+    color: #000000;
     padding: 1em;
 }
-header h1 {
+.title h1 {
     text-align: center;
     color: black;
 }
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -33,7 +34,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #000;
     text-decoration: none;
 }
 ol {
@@ -47,6 +48,7 @@ button {
 }
 #green {
     background-color: #4CAF50;
+    color: #000000;
 }
 #white {
     background-color: #fff;
