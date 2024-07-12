@@ -283,7 +283,6 @@ select {
 }
 /*styling for discover page*/
 .container {
-    /*display: flex;*/
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 20px;
@@ -291,7 +290,6 @@ select {
     padding: 10px;
 }
 .sidebar {
-    /*width: 25%;*/
     padding: 20px;
     margin: 10px 10px;
     background-color: #fff;
@@ -300,9 +298,7 @@ select {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 .main-content {
-    /*width: 75%;*/
     padding: 20px;
-    /*margin-left: 2%;*/
     background-color: #fff;
     box-sizing: border-box;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -353,9 +349,10 @@ footer {
     flex: 1;
     text-align: left;
 }
-.footer-middle {
+.footer-middle a {
     flex: 1;
     text-align: center;
+    color: white;
 
 }
 .footer-middle img {
