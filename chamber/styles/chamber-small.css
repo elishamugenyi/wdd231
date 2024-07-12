@@ -1,5 +1,5 @@
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     main {
         display: flex;
         flex-direction: column;
@@ -61,5 +61,11 @@
     figure {
         width: calc(33.333% - 2%);
     }
+    figure:hover {
+        transform: none;
+        box-shadow: none;
+        transition: none;
+    }
 }
+
 
