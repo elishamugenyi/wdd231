@@ -1,0 +1,93 @@
+[
+    {
+      "name": "Water Front Hotel",
+      "city": "Madrid",
+      "phone": " 0300-456-7890",
+      "country": "Spain",
+      "price": "$48",
+      "image": "hotel11.webp"
+
+    },
+    {
+      "name": "Paradise Hotel",
+      "city": "Kampala",
+      "phone": "+256 0300-456-7890",
+      "country": "Uganda",
+      "price": "$58",
+      "image": "hotel1.webp"
+    },
+    {
+      "name": "Tourist Hotel",
+      "city": "Seychelles",
+      "phone": "0300-456-7890",
+      "country": "Seychelles",
+      "price": "$38",
+      "image": "hotel2.webp" 
+    },
+    {
+      "name": "Cabanna Resort Hotel",
+      "city": "Wakanda",
+      "phone": "+253 0300-456-7890",
+      "country": "Ganda",
+      "price": "$40",
+      "image": "hotel4.webp"
+    },
+    {
+      "name": "Mozart Hotel",
+      "city": "Rome",
+      "phone": "+3 0300-456-7890",
+      "country": "Italy",
+      "price": "$60",
+      "image": "hotel3.webp"
+    },
+    {
+      "name": "Abyss Hotel",
+      "city": "shacktar",
+      "phone": "300-456-7890",
+      "country": "Nomand",
+      "price": "$59",
+      "image": "hotel5.webp"
+    },
+    {
+      "name": "Palm waters",
+      "city": "Cedar",
+      "phone": "+1 300-456-7890",
+      "country": "US",
+      "price": "$148",
+      "image": "hotel6.webp"
+    },
+    {
+      "name": "Serena Hotel",
+      "city": "Nairobi",
+      "phone": "+256 0300-456-7890",
+      "country": "Kenya",
+      "price": "$428",
+      "image": "hotel7.webp"
+    },
+    {
+      "name": "Lakeview Hotel",
+      "city": "Viena",
+      "phone": "+256 0300-456-7890",
+      "country": "Austria",
+      "price": "$485",
+      "image": "hotel8.webp"
+    },
+    {
+      "name": "Ice palour Hotel",
+      "city": "Venice",
+      "phone": "+256 0300-456-7890",
+      "country": "Italy",
+      "price": "$28",
+      "image": "hotel9.webp"
+    },
+    {
+      "name": "Mwamba Hotel",
+      "city": "FortPortal",
+      "phone": "+256 0300-456-7890",
+      "country": "Uganda",
+      "price": "$48",
+      "image": "ecolodge.webp"
+    }
+
+  ]
+  

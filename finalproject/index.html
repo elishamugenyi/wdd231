@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title content="TravelMate">TravelMate</title>
+    <meta name="author" content="Elisha Mugenyi">
+    <meta name="description" content="Elisha Mugenyi, TravelMate">
+    <meta property="og:image" content="https://www.elishamugenyi.github.io/wdd231/finalproject/images/logo.webp/">
+    <meta property="og:url" content="https://elishamugenyi.github.io/wdd231/finalproject/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Elisha Mugenyi, WDD 231 - finalproject">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/small-view.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/main.js"></script>
+</head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1>TravelMate✈️</h1>
+            </div>
+            <div class="menu">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="index.html" class="active"> Home </a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="mybookings.html">My Bookings</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="user-profile">
+                <!-- user image goes here after registration-->
+            </div>
+        </header>
+        
+        <main>
+            <div class="search-bar">
+                <div class="tabs">
+                    <button class="tablinks" onclick="openTab(event, 'flights')">Flights</button>
+                    <button class="tablinks" onclick="openTab(event, 'hotels')">Hotels</button>
+                    <button class="tablinks" onclick="openTab(event, 'car-rentals')">Car Rentals</button>
+                    <button class="tablinks" onclick="openTab(event, 'game-parks')">Game Parks</button>
+                </div>
+                <div class="search-inputs">
+                    <!-- Add search inputs here -->
+                </div>
+            </div>
+    
+            <section class="featured">
+                <div id="flights" class="tabcontent">
+                    <h2>Featured Flights</h2>
+                    <!-- Add featured flights here -->
+                </div>
+                <div id="hotels" class="tabcontent">
+                    <h2>Featured Hotels</h2>
+                    <select id="country">
+                        <option value="all">Select By Country</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Ganda">Ganda</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Nomand">Nomand</option>
+                        <option value="Seychelles">Seychelles</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="US">US</option>
+                    </select>
+                    
+                    <!-- Add featured hotels here -->
+                </div>
+                <div id="car-rentals" class="tabcontent">
+                    <h2>Featured Car Rentals</h2>
+                    <!-- Add featured car rentals here -->
+                </div>
+                <div id="game-parks" class="tabcontent">
+                    <h2>Featured Game Parks</h2>
+                    <!-- Add featured game parks here -->
+                </div>
+            </section>
+    
+            <div class="promotional-banner">
+                <h2>Special Deals and Promotions</h2>
+                <!-- Add promotional content here -->
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-left">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">FAQs</a>
+            <a href="#">Blog</a>
+            </div>
+            <div class="footer-middle">
+                <p><a href="https://github.com/elishamugenyi">My Profile</a></p>    
+            </div>
+            <div class="footer-right">
+                <h4>WDD 231 Final Project</h4>
+                <p>
+                    <span id="currentyear"></span> Elisha Mugenyi 🇺🇬 Uganda
+                </p>
+                <p id="lastModified">last</p>
+            </div>
+        </footer>
+    </body>
+</html>
