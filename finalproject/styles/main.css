@@ -17,7 +17,9 @@ header {
     font-size: 1.5em;
     font-weight: bold;
 }
-
+nav {
+    margin-right: 70px;
+}
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -43,12 +45,6 @@ nav ul li a:hover {
     background-color: #4CAF50;
     color: white;
 }
-.user-profile img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
 main {
     padding: 2em;
     display: flex;
@@ -65,7 +61,7 @@ main {
     margin-bottom: 2em;
 }
 
-.tabs button,#bookNowBtn {
+.tabs button,#bookNowBtn, #searchButton {
     margin: 0.5em;
     padding: 0.5em 1em;
     width: 120px;
@@ -75,7 +71,7 @@ main {
     transition: 0.6s;
     cursor: pointer;
 }
-.tabs button:hover {
+.tabs button:hover,#searchButton:hover {
     background-color: #00008B;
     color: white;
 }
@@ -111,6 +107,7 @@ select {
     border-radius: 8px;
     text-align: center;
 }
+
 .about p {
    margin: 0.5rem;
    padding: 10px;
@@ -193,7 +190,7 @@ input[type="submit"] {
     border-radius: 6px;
 }
 
-#hotels {
+#hotelResults {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -222,7 +219,7 @@ input[type="submit"] {
 
 .hotel-card h3 {
     align-items: center;
-    font-size: 0.5em;
+    font-size: 1.5em;
     margin: 10px 0;
 }
 
