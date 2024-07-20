@@ -38,11 +38,11 @@ nav ul li a {
 }
 nav ul li a.active {
     background-color: #4CAF50;
-    color:  white;
+    color:  black;
 
 }
 nav ul li a:hover {
-    background-color: #4CAF50;
+    background-color: #000;
     color: white;
 }
 main {
@@ -61,7 +61,7 @@ main {
     margin-bottom: 2em;
 }
 
-.tabs button,#bookNowBtn, #searchButton {
+.tabs button,#bookNowBtn, #searchButton,#search,#back {
     margin: 0.5em;
     padding: 0.5em 1em;
     width: 120px;
@@ -71,7 +71,7 @@ main {
     transition: 0.6s;
     cursor: pointer;
 }
-.tabs button:hover,#searchButton:hover {
+.tabs button:hover,#searchButton:hover,#search:hover {
     background-color: #00008B;
     color: white;
 }
@@ -242,7 +242,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: grey;
+    background-color: #000;
     color: white;
     padding: 1em;
 }

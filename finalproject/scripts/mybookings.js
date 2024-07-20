@@ -11,4 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         bookingDetails.innerHTML = '<p>No bookings found.</p>';
     }
+    //set the back button to redirect you to home page.
+    document.getElementById('back').addEventListener("click",redirectJoin);
+
+    //create function to redirect
+    function redirectJoin() {
+        window.location.href = ("index.html")
+    }
 });

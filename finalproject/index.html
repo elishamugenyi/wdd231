@@ -21,6 +21,9 @@
     <script defer src="scripts/getdates.js"></script>
     <script defer src="scripts/main.js"></script>
     <script defer src="scripts/form.js"></script>
+    <script defer src="scripts/weather.js"></script>
+    
+    
     
 </head>
     <body>
@@ -45,7 +48,7 @@
                 <div class="tabs">
                     <button class="tablinks" onclick="openTab(event, 'flights')">Flights</button>
                     <button class="tablinks" onclick="openTab(event, 'hotels')">Hotels</button>
-                    <button class="tablinks" onclick="openTab(event, 'car-rentals')">Car Rentals</button>
+                    <button class="tablinks" onclick="openTab(event, 'weather')">Current Weather</button>
                     <button class="tablinks" onclick="openTab(event, 'game-parks')">Game Parks</button>
                 </div>
             </div>
@@ -55,71 +58,112 @@
                     <h2>Featured Flights</h2>
                     <!-- Add featured flights here -->
                     <form id="flightSearchForm">
-                        <label for="originLocationCode">Origin Location Code (IATA):</label>
-                        <input type="text" id="originLocationCode" name="originLocationCode" pattern="[A-Z]{3}" required>
+                        <fieldset>
+                            <legend>Flight Details:</legend>
+                            <label>From (IATA CODE):
+                                <input type="text" id="origin" name="origin" pattern="[A-Z]{3}" required>
+                                <div id="originSuggestions" class="suggestions"></div>
+                            </label>
+                            
                 
-                        <label for="destinationLocationCode">Destination Location Code (IATA):</label>
-                        <input type="text" id="destinationLocationCode" name="destinationLocationCode" pattern="[A-Z]{3}" required>
-                
-                        <label for="departureDate">Departure Date (YYYY-MM-DD):</label>
-                        <input type="date" id="departureDate" name="departureDate" required>
-                
-                        <label for="returnDate">Return Date (YYYY-MM-DD):</label>
-                        <input type="date" id="returnDate" name="returnDate">
-                
-                        <label for="adults">Adults:</label>
-                        <input type="number" id="adults" name="adults" min="1" max="9" value="1" required>
-                
-                        <label for="children">Children:</label>
-                        <input type="number" id="children" name="children" min="0" max="9" value="0">
-                
-                        <label for="infants">Infants:</label>
-                        <input type="number" id="infants" name="infants" min="0" max="9" value="0">
-                
-                        <label for="travelClass">Travel Class:</label>
-                        <select id="travelClass" name="travelClass">
-                            <option value="">Any</option>
-                            <option value="ECONOMY">Economy</option>
-                            <option value="PREMIUM_ECONOMY">Premium Economy</option>
-                            <option value="BUSINESS">Business</option>
-                            <option value="FIRST">First</option>
-                        </select>
-                
-                        <label for="includedAirlineCodes">Included Airline Codes (comma-separated):</label>
-                        <input type="text" id="includedAirlineCodes" name="includedAirlineCodes" pattern="[0-9A-Z,]{2,}">
-                
-                        <button type="submit" id="searchButton">Search Flights</button>
+                            <label>To (IATA CODE):
+                                <input type="text" id="destination" name="destination" pattern="[A-Z]{3}" required>
+                                <div id="destinationSuggestions" class="suggestions"></div>
+                            </label>
+                            
+                    
+                            <label>Departure Date (YYYY-MM-DD):
+                                <input type="date" id="departureDate" name="departureDate" required>
+                            </label>
+                    
+                            <label>Return Date (YYYY-MM-DD):
+                                <input type="date" id="returnDate" name="returnDate">
+                            </label>
+
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend>Traveller Information:</legend>
+                            <label>Adults:
+                                <input type="number" id="adults" name="adults" min="1" max="9" value="1" required>
+                            </label>
+                    
+                            <label>Children:
+                                <input type="number" id="children" name="children" min="0" max="9" value="0">
+                            </label>
+                    
+                            <label>Infants:
+                                <input type="number" id="infants" name="infants" min="0" max="9" value="0">
+                            </label>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend>Travel Class:</legend>
+                            <label>Travel Class:
+                                <select id="travelClass" name="travelClass" required>
+                                    <option value="">Any</option>
+                                    <option value="ECONOMY">Economy</option>
+                                    <option value="PREMIUM_ECONOMY">Premium Economy</option>
+                                    <option value="BUSINESS">Business</option>
+                                    <option value="FIRST">First</option>
+                                </select>
+                            </label><br>
+                            <label>Price:
+                                <input type="text" id="price" name="price" placeholder="enter only digits, do not add dollar symbol" required>
+                            </label>
+
+                            <label>Airline Codes (comma-separated):
+                                <select id="airlineCodes" name="AirlineCodes" pattern="[0-9A-Z,]{2,}" required>
+                                    <option value="A8* Aerolink Uganda">A8*-Aerolink Uganda</option>
+                                    <option value="UR Uganda National Airline Company">UR-Uganda National Airline Co</option>
+                                    <option value="TC Air Tanzania">TC-Air Tanzania</option>
+                                    <option value="KQ Kenya Airways">KQ-Kenya Airways</option>
+                                    <option value="XO South East Asian Airlines">XO-South East Asian Airlines</option>
+                                    <option value="SA South African Airways">SA-South African Airways</option>
+                                    <option value="BA British Airways">BA-British Airways</option>
+                                    <option value="A0 BA Euroflyer Limited dba British Airways">A0-BA Euroflyer Limited dba British Airways</option>
+                                    <option value="TK Turkish Airlines Inc.">TK-Turkish Airlines Inc.</option>
+                                    <option value="ZQ German Airways GmbH & Co.KG">ZQ-German Airways GmbH & Co.KG</option>
+                                    <option value="EX Regional Express Americas SAS">EX-Regional Express Americas SAS</option>
+                                    <option value="V1 IBS Software Services Americas, Inc">V1-IBS Software Services Americas, Inc</option>
+                                </select>
+                            </label>
+                        </fieldset>
+                        <button type="submit" id="search">Search Flights</button>
                     </form>
                     <div id="flightResults"></div>
                 </div>
                 <div id="hotels" class="tabcontent">
                     <h2>Featured Hotels</h2>
                     <form id="hotelSearchForm">
-                        <label for="country">Country:</label>
-                        <input type="text" id="country" name="country" placeholder="Enter country">
+                        <label>Country:
+                            <input type="text" id="country" name="country" placeholder="Enter country">
+                        </label>
     
-                        <label for="city">City:</label>
-                        <input type="text" id="city" name="city" placeholder="Choose from Nairobi, Kampala, Madrid, Venice etc.">
+                        <label>City:
+                            <input type="text" id="city" name="city" placeholder="Choose from Nairobi, Kampala, Madrid, Venice etc.">
+                        </label>
     
-                        <label for="price">Max Price:</label>
-                        <input type="text" id="price" name="price" placeholder="Enter max price">
+                        <label>Max Price:
+                            <input type="text" id="price" name="price" placeholder="Enter max price">
+                        </label>
     
-                        <button type="button" id="searchButton" onclick="searchHotels()">Search</button>
+                        <button type="button" id="searchButton">Search</button>
                     </form>
                     <div id="hotelResults"></div>
 
                 </div>
-                <div id="car-rentals" class="tabcontent">
-                    <h2>Featured Car Rentals</h2>
-                    <!-- Add featured car rentals here -->
+                <div id="weather" class="tabcontent">
+                    
+                </div>
+                <div id="forecast">
+                    
                 </div>
                 <div id="game-parks" class="tabcontent">
                     <h2>Featured Game Parks</h2>
                     <!-- Add featured game parks here -->
                 </div>
-                <div id="weather" class="weather-updates">
                 
-                </div>
             </section>
            
         </main>
@@ -141,5 +185,6 @@
                 <p id="lastModified">last</p>
             </div>
         </footer>
+     
     </body>
 </html>

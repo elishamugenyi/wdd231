@@ -16,33 +16,20 @@
     .about {
         width: 100%;
     }
-
-    .cta, .update {
+    .update {
         flex-direction: column;
         align-items: center;
         padding: 10px;
         margin: 5px 0;
     }
-    .cta h2 {
-        margin: 10px 0;
-    }
-    .cta p, .events, .weather, .forecast-card {
+    .weather, .forecast-card {
         width: 100%;
         margin: 10px 0;
         padding: 10px;
         box-sizing: border-box;
     }
-
-
     label {
         grid-template-columns: 1fr;
-    }
-
-    .main-content {
-        margin-left: 2%;
-    }
-    figure {
-        width: calc(33.333% - 2%);
     }
 }
 @media screen and (min-width: 768px) {
