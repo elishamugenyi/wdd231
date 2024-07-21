@@ -60,8 +60,7 @@ main {
     align-items: center;
     margin-bottom: 2em;
 }
-
-.tabs button,#bookNowBtn, #searchButton,#search,#back {
+.tabs button,#bookNowBtn, #searchButton,#search,#back,#learnMoreBtn{
     margin: 0.5em;
     padding: 0.5em 1em;
     width: 120px;
@@ -71,7 +70,7 @@ main {
     transition: 0.6s;
     cursor: pointer;
 }
-.tabs button:hover,#searchButton:hover,#search:hover {
+.tabs button:hover,#searchButton:hover,#search:hover,#learnMoreBtn:hover {
     background-color: #00008B;
     color: white;
 }
@@ -107,11 +106,28 @@ select {
     border-radius: 8px;
     text-align: center;
 }
-
-.about p {
+.about p,.privacy p, .terms p, #game-parks p, .landing p {
    margin: 0.5rem;
    padding: 10px;
-   line-height: 30px; 
+   line-height: 40px; 
+   text-align: left;
+}
+/*styling of span*/
+#front {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInSlideUp 3s forwards;
+}
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 /* Modal styling */
 #bookingModal {
@@ -130,35 +146,89 @@ select {
     overflow: auto;
     z-index: 1000; /* places modal on top of other content */
 }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15px 10px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    transform: translateY(-20px);
+    animation: slideDown 0.5s forwards;
+}
+@keyframes slideDown {
+    from {transform: translateY(-10px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+.modal-content h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.modal-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+.modal-content li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.modal-content li h4 {
+    margin: 0;
+}
+.modal-content li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.modal-content li a:hover {
+    color: #0056b3;
+}
 .close {
     height: fit-content;
     width: 50px;
     color: red;
+    float: center;
+    font-size: 18px;
+    font-weight: bold;
 }
+.close:hover, .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
 #bookingModal h3, .about h2 {
     margin-bottom: 10px;
     color: #00008B;
 }
 #bookingModal div {
-    margin-bottom: 15px;
+    margin-top: 15px;
 }
-@keyframes fadeInUp {
+@keyframes fadeIn {
     to {
         opacity: 2;
         transform: translateY(1);
     }
-}
-
-/* Backdrop styling */
-.modal-content::backdrop {
-    position: fixed;
-    z-index: 0;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(5px); 
-    background-color: rgba(184, 204, 205, 0.5); 
 }
 form {
     display: grid;

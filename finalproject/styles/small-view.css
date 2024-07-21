@@ -16,13 +16,13 @@
     .about {
         width: 100%;
     }
-    .update {
+    ul li {
         flex-direction: column;
         align-items: center;
         padding: 10px;
         margin: 5px 0;
     }
-    .weather, .forecast-card {
+    .weather {
         width: 100%;
         margin: 10px 0;
         padding: 10px;
