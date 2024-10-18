@@ -44,6 +44,9 @@
         </header>
         
         <main>
+            <div class="hero">
+                <img src="images/new.webp" alt="vacation" width="500" height="200" lazyloading="delay">
+            </div>
             <div class="search-bar">
                 <div class="tabs">
                     <button class="tablinks" onclick="openTab(event, 'flights')">Flights</button>
@@ -131,7 +134,10 @@
                         </fieldset>
                         <button type="submit" id="search">Search Flights</button>
                     </form>
-                    <div id="flightResults"></div>
+                    <div id="flightResults">
+                        <script async src="https://tp.media/content?currency=usd&trs=336833&shmarker=560710&show_hotels=true&powered_by=true&locale=en&searchUrl=search.hotellook.com&primary_override=%23FF8E01&color_button=%234CAF50&color_icons=%23FF8E01&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%23FF8E01&border_radius=12&no_labels=&plain=true&promo_id=7879&campaign_id=100" charset="utf-8"></script>
+                    </div>
+                        
                 </div>
                 <div id="hotels" class="tabcontent">
                     <h2>Featured Hotels</h2>
@@ -151,6 +157,9 @@
                         <button type="button" id="searchButton">Search</button>
                     </form>
                     <div id="hotelResults"></div>
+                    <div>
+                        <script async src="https://tp.media/content?currency=usd&trs=336833&shmarker=560710&show_hotels=true&powered_by=true&locale=en&searchUrl=search.hotellook.com&primary_override=%23FF8E01&color_button=%234CAF50&color_icons=%23FF8E01&secondary=%23FFFFFF&dark=%23262626&light=%23FFFFFF&special=%23C4C4C4&color_focused=%23FF8E01&border_radius=12&no_labels=&plain=true&promo_id=7873&campaign_id=101" charset="utf-8"></script>
+                    </div>
 
                 </div>
                 <div id="weather" class="tabcontent">
@@ -205,6 +214,7 @@
                         
                     </p>
                     <span id="front">Select any of the options(Flight, Hotels or Game parks) to start your search</span>
+                   <!-- <script async src="https://c86.travelpayouts.com/content?trs=336833&shmarker=560710&locale=en&width=100&powered_by=true&promo_id=2110" charset="utf-8" async></script> -->
                 </div>
                 
             </section>
